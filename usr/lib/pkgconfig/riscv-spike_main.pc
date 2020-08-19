@@ -1,0 +1,12 @@
+prefix=/hardisk/ding/work/test/usr
+exec_prefix=/hardisk/ding/work/test/usr
+libdir=${prefix}/${exec_prefix}/lib
+includedir=${prefix}/${prefix}/include
+
+Name: riscv-spike_main
+Description: RISC-V ISA simulator library
+Version: git
+Depends: riscv-riscv riscv-softfloat
+Libs: -Wl,-rpath,${libdir} -L${libdir} -lspike_main
+Cflags: -I${includedir}
+URL: http://riscv.org/download.html#tab_spike

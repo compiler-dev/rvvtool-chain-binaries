@@ -1,0 +1,11 @@
+prefix=/hardisk/ding/work/test/usr
+exec_prefix=/hardisk/ding/work/test/usr
+libdir=${prefix}/${exec_prefix}/lib
+includedir=${prefix}/${prefix}/include
+
+Name: riscv-dummy_rocc
+Description: Example RISC-V ROCC accelerator
+Version: git
+Libs: -Wl,-rpath,${libdir} -L${libdir} -ldummy_rocc
+Cflags: -I${includedir}
+URL: http://riscv.org/download.html#tab_spike
